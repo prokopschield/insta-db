@@ -1,0 +1,8 @@
+backtrace
+build/
+core
+foo.*
+lib/
+node_modules/
+seg_wrapper.sh
+src/test.ts
