@@ -80,7 +80,8 @@ export class DB {
 
     getString(key: DBValue): string
     {
-        return String(this.getBuffer(key));
+        const buffer = this.getBuffer(key);
+        return buffer?.length ? String(buffer) : '';
     }
 
     set(key: DBValue, val: DBValue): boolean

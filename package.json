@@ -1,7 +1,7 @@
 {
 	"name": "insta-db",
 	"description": "instant file database",
-	"version": "0.1.0-1",
+	"version": "0.1.0-2",
 	"main": "lib/index.js",
 	"bin": {
 		"insta-db": "lib/cli.js"
