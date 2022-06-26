@@ -1,4 +1,4 @@
-all: build/Makefile build/blake3-build build/libdeflate build/Release/db.node lib/index.js
+all: build/Makefile build/blake3-build/libblake3.a build/libdeflate build/Release/db.node lib/index.js
 
 run: all
 	node .
@@ -15,7 +15,7 @@ build/Release/db.node: $(wildcard src/*.cc)
 lib/index.js: $(wildcard src/*.ts)
 	tsc
 
-build/blake3-build:
+build/blake3-build/libblake3.a:
 	cd build && git clone https://github.com/prokopschield/blake3-build && cd blake3-build && make
 
 build/libdeflate:
