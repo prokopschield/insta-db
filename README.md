@@ -4,7 +4,7 @@ Instant Node.js database with built-in redundancy
 
 ### Supported platforms
 
-This node-native module runs on 64-bit GNU/Linux and depend on git, gcc, make, node-gyp, and mmap (POSIX).
+This node-native module runs on 64-bit GNU/Linux and depends on git, gcc, make, node-gyp, and mmap (POSIX).
 
 ### Installation
 
