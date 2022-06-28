@@ -1,7 +1,7 @@
 {
 	"name": "insta-db",
 	"description": "instant file database",
-	"version": "0.1.0-4",
+	"version": "0.1.0-5",
 	"main": "lib/index.js",
 	"bin": {
 		"insta-db": "lib/cli.js"
@@ -10,10 +10,9 @@
 		"install": "node-gyp configure && make"
 	},
 	"author": "Prokop Schield",
-	"devDependencies": {
+	"dependencies": {
 		"@types/node": ">=14"
 	},
 	"keywords": [],
-	"license": "GPL-3.0-or-later",
-	"dependencies": {}
+	"license": "GPL-3.0-or-later"
 }
