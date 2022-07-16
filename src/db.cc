@@ -297,15 +297,15 @@ uint32_t dbw_insert_chunk_f(db_wrapper_t* db, uint8_t* data, uint16_t length)
     uint32_t bucket = db->RW->used;
     db_entry_t* entry = bucket_to_entry_f(db->RW, bucket);
 
-    size_t available_space = ((db->RO->size - db->RO->used) << ENTRY_SIZE_SHIFT) - sizeof(db_entry_t);
+    size_t available_space = (((size_t)db->RO->size - (size_t)db->RO->used) << ENTRY_SIZE_SHIFT) - sizeof(db_entry_t);
     if (available_space < ENTRY_MAX_SIZE_BYTES) {
-        napi_throw_error(genv, nullptr, "Database is too full!");
+        napi_throw_error(genv, nullptr, "Database is too full! (available_space < ENTRY_MAX_SIZE_BYTES)");
         return 0;
     }
 
     entry->size = compress_f(data, length, entry->data, available_space);
     if (entry->size == 0) {
-        napi_throw_error(genv, nullptr, "Database is too full!");
+        napi_throw_error(genv, nullptr, "Database is too full! (compression failed)");
         return 0;
     }
 
