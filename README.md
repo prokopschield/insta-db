@@ -12,6 +12,12 @@ First make sure git, gcc, and GNU Make are installed.
 
 `yarn add insta-db`
 
+You must also first install TypeScript, which is needed to compile this program.
+
+`sudo yarn global add typescript` or `pnpm i -g typescript`
+
+Make sure `typescript` is in `PATH`.
+
 ### Usage
 
 ```typescript
